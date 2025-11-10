@@ -38,6 +38,20 @@
       }
     }
 
+    #volunteer {
+      justify-content: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    /* #out-foundation {
+      .resume-text {
+        width: 60%;
+      }
+    } */
+
     #mayor {
       background-image: url('./photos/city-we-can-afford.JPG');
       opacity: 0.85;
@@ -79,24 +93,25 @@
       }
     }
 
-    #software {
-      background-color: #006C67;
+    .resume-page {
+      background-color: #006C67 !important;
       color: white;
 
-      .software-text {
+      .resume-text {
         width: 60%;
         padding-right: 50px;
       }
 
+      img {
+          width: 100%;
+      }
+      
+      .software-img {
+        width: 100%
+      }
+
       .software-imgs {
         width: 40%;
-        .software-img {
-          width: 100%
-        }
-
-        img {
-          width: 100%;
-        }
 
         div:not(:first-child) {
           margin-top: 20px;
@@ -104,9 +119,12 @@
       }
     }
 
+    .flex-content {
+      display: flex;
+    }
+
     .row {
       padding: 40px 32px;
-      display: flex;
       background-color: rgba(238, 236, 236, 0.9);
       background-size: cover;
       background-position: center center;
@@ -119,7 +137,6 @@
       }
 
       .centered-content {
-        display: flex;
         align-items: center;
         height: 100%;
         margin: 5vh;
@@ -137,7 +154,7 @@
             font-size: 1em;
             margin: 0;
             padding: 5px;
-            border-radius: 5%;
+            border-radius: 10%;
           }
 
           .volunteer-exp {
@@ -171,12 +188,42 @@
         }
       }
 
+      .center-carousel {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .carousel-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+      }
+
+      .carousel-slide {
+        height: 30rem;
+        width: 100%;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+          img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+          }
+      }
+
+      .inactive-slide {
+        display: none;
+      }
+
       .button-container {
         margin-top: 20px;
         button {
           margin: 5px 12px;
           color: white;
-          background-color: #006C67;
+          background-color: #EE8434;
           border: none;
           cursor: pointer;
           font-weight: bold;
@@ -186,6 +233,10 @@
         
         & > :not(first-child) {
           margin-left: 0;
+        }
+
+        & > :last-child {
+          margin-right: 0;
         }
       }
     }
@@ -206,7 +257,7 @@
   justify-content: space-between;
 
   .name {
-    font-size: calc(2vmin);
+    font-size: calc(1em);
     padding: 0 4vh;
   }
 

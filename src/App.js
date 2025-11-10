@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
+import { Carousel } from './Carousel';
+import { OUT_CAROUSEL } from './data/outFoundationCarousel';
+import { ART_CAROUSEL } from './data/artCarousel';
+
 import helloSelfie from './photos/hello-selfie.jpeg';
 import NBCSports from './photos/nbc-sports.png';
+import panel from './photos/oit-panel.png';
+import oitLi from './photos/oit-li.png'
+import ergSummit from './photos/ERG-summit.jpg'
+import penn from './photos/penn.jpg'
 import './App.css';
 
 export const App = () => {
@@ -26,8 +34,8 @@ export const App = () => {
         <section className="section-background" id="welcome-page">
           <h1 className="welcome">Welcome.</h1>
         </section>
-        <section className="row" id="about-me">
-          <div className="centered-content">
+        <section className="row flex-content" id="about-me">
+          <div className="centered-content flex-content">
             <div className="img-container">
               <img alt="a picture of me in Bryant Park" src={helloSelfie} />
             </div>
@@ -50,9 +58,9 @@ export const App = () => {
             </div>
           </div>
         </section>
-        <section className="row" id="software">
-          <div className="centered-content">
-            <div className="software-text">
+        <section className="row resume-page flex-content" id="software">
+          <div className="centered-content flex-content">
+            <div className="resume-text">
               <h1>Software Development</h1>
               <div>
                 <p>I am a full-stack engineer with six years of experience. I work in React, TypeScript, Java, Spring, Python, and Rails.</p>
@@ -79,33 +87,30 @@ export const App = () => {
                 <img alt="the NBC Sports front from NBCNews.com" src={NBCSports} />
               </div>
               <div className="software-img">
-                <img alt="the NBC Sports front from NBCNews.com" src={NBCSports} />
-              </div>
-              <div className="software-img">
-                <img alt="the NBC Sports front from NBCNews.com" src={NBCSports} />
+                <img alt="the NBC Sports front from NBCNews.com" src={penn} />
               </div> 
             </div>
           </div>
         </section>
-        <section className="row" id="volunteer">
-          <div className="centered-content">
-            <div className="volunteer-container">
+        <section className="row flex-content" id="volunteer">
+          <div className="centered-content flex-content">
+            <div className="volunteer-container justify-center">
               <h1>Volunteer</h1>
               <div className="project-container">
-                <div className="volunteer-exp zohran-for-mayor centered-content">
+                <div className="volunteer-exp zohran-for-mayor centered-content flex-content">
                   <h2>Zohran Mamdani for Mayor</h2>
                 </div>
-                <div className="volunteer-exp out-in-tech centered-content">
+                <div className="volunteer-exp out-in-tech centered-content flex-content">
                   <h2>Out in Tech</h2>
                 </div>
-                <div className="volunteer-exp out-foundation centered-content">
+                <div className="volunteer-exp out-foundation centered-content flex-content">
                   <h2>The OUT Foundation</h2>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="row section-background" id="mayor">
+        <section className="row section-background flex-content" id="mayor">
           <div className="text-box">
             <div>
               <h1>Zohran Mamdani for Mayor</h1>
@@ -117,15 +122,69 @@ export const App = () => {
             </div>
           </div>
         </section>
-        <section className="row" id="out-in-tech">
-          <div className="centered-content">
-            <h1>Out in Tech</h1>
+        <section className="row resume-page flex-content" id="out-in-tech">
+          <div className="centered-content flex-content">
+            <div className="resume-text">
+              <h1>Out in Tech</h1>
+              <div>
+                <p>Out in Tech is an organization focused on uniting and uplifting the LGBTQ community. I fulfilled this mission by creating networking opportunities as well as events aimed at building career skills. </p>
+                <p>During the COVID-19 pandemic, I started a new chapter of the organization virtually in Salt Lake City, Utah as an opportunity to build community during a lonely time. I interviewed and assembled a chapter leadership team and built a Slack community from 0 to 60+ members.</p>
+                <p>Most recently, I served in chapter leadership in New York City. This included planning and coordinating events for up to 85 people as well as hosting events and panels with up to 100 attendees.</p>
+              </div>
+              <div className="software-img">
+                <img alt="the NBC Sports front from NBCNews.com" src={panel} />
+              </div>
+            </div>
+            <div className="software-imgs">
+
+              <div className="software-img">
+                <img alt="the NBC Sports front from NBCNews.com" src={oitLi} />
+              </div> 
+              <div className="software-img">
+                <img alt="professionals seated on large steps in an office discussing ERG experience" src={ergSummit} />
+              </div>
+            </div>
           </div>
         </section>
-        <section className="row" id="volunteer">
-          <div className="centered-content">
+        <section className="row" id="out-foundation">
+          <h1>The OUT Foundation</h1>
+          <div className="centered-content flex-content justify-center">
+            <Carousel
+              data={OUT_CAROUSEL}
+              // inheritClass={"center-carousel"}
+            />
+          </div>
+          <div className="resume-text">
             <div>
-              <h1>Art and Illustration</h1>
+              <p>
+                The OUT Foundation is focused on helping all LGBTQ alumni and students at Brigham Young University (BYU) reach their full potential. This includes through alumni networking and mentorship, facilitating subsidized therapy, and transfer scholarships for current students who need financial assistance to leave the institution.
+              </p>
+              <p>
+                I worked with the founding team starting in 2018 as a social media manager and then as Outreach Coordinator for all digital communcations and east coast community events.
+              </p>
+              <p>
+                When BYU removed a clause from their honor code regarding "homosexual behavior", <a href="https://www.sltrib.com/news/education/2020/03/04/after-byu-honor-code/">only to reinstate it weeks later</a> after students started to come out,
+                I worked with the team to create a viral social media campaign that raised $30,000 for therapy and transfer scholarships for affected students. We also worked with queer alumni and allies to hold protests across the country, including on campus
+                and in Lincoln Square.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="row resume-page" id="volunteer">
+          <h1>Art and Illustration</h1>
+          <div className="resume-content">
+            <p>
+            I have loved art since I was an elementary school kid drawing in the margins of all my assignments. I mainly love to paint and use watercolors or acrylics.
+            </p>
+            <p>
+              In addition to my own art, I cofounded a queer figure drawing group with my friends. We host a monthly figure drawing session for up to 20 people. More details to come soon.
+            </p>
+          </div>
+          <div className="centered-content flex-content justify-center">
+            <div>
+              <Carousel
+                data={ART_CAROUSEL}
+              />
             </div>
           </div>
         </section>
