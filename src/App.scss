@@ -1,12 +1,35 @@
+$breakpoints: (
+  mobile: 0px,
+  tablet: 600px,
+  tablet-large: 750px,
+  desktop: 1025px
+);
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @media (min-width: map-get($breakpoints, $key)) {
+      @content
+    }
+  }
+}
+
 .App {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   color: rgb(68, 66, 66);
-  font-size: 1rem;
   line-height: 1.5;
-  font-weight: 400;
+
+  @include media(mobile, tablet, tablet-large) {
+    font-size: 1.5em;
+    font-weight: 550;
+  }
+
+  @include media(desktop) {
+    font-size: 1em;
+    font-weight: 400;
+  }
 
   a {
     text-decoration: none;
@@ -34,7 +57,18 @@
 
       .welcome {
         margin: 0;
-        padding: 70vh 0 15vh 20vh;
+
+        @include media(tablet, mobile) {
+           padding: 70vh 0 8vh 6vh;         
+        }
+
+        @include media(tablet, tablet-large) {
+           padding: 80vh 0 12vh 8vh;         
+        }
+        
+        @include media(desktop) {
+          padding: 70vh 0 15vh 20vh;
+        }
       }
     }
 
@@ -46,12 +80,6 @@
       justify-content: center;
     }
 
-    /* #out-foundation {
-      .resume-text {
-        width: 60%;
-      }
-    } */
-
     #mayor {
       background-image: url('./photos/city-we-can-afford.JPG');
       opacity: 0.85;
@@ -62,11 +90,22 @@
         background-color: #006C67;
         color: white;
         padding: 20px;
-        max-width: 60vh;
         max-height: fit-content;
 
         h1 {
           margin-top: 0;
+
+          @include media(mobile) {
+            font-size: 1em;
+          }
+        }
+
+        @include media(mobile, tablet, tablet-largefont-size) {
+          max-width: 40vh;
+        }
+
+        @include media(desktop) {
+          max-width: 60vh;
         }
       }
     }
@@ -75,20 +114,26 @@
       display: flex;
 
       .img-container {
-        width: 50%;
         height: 100%;
         padding: 20px;
         img {
           width: 100%;
         }
+
+        @include media(desktop) {
+          width: 50%;
+        }
       }
 
       #about-text {
-        width: 50%;
         margin: 20px;
 
         .about-intro {
           margin: 0;
+        }
+
+        @include media(desktop) {
+          width: 50%;
         }
       }
     }
@@ -98,8 +143,10 @@
       color: white;
 
       .resume-text {
-        width: 60%;
-        padding-right: 50px;
+        @include media(desktop) {
+          width: 60%;
+          padding-right: 50px;
+        }
       }
 
       img {
@@ -111,7 +158,9 @@
       }
 
       .software-imgs {
-        width: 40%;
+        @include media(desktop) {
+          width: 40%;
+        }
 
         div:not(:first-child) {
           margin-top: 20px;
@@ -120,6 +169,12 @@
     }
 
     .flex-content {
+      @include media(desktop) {
+        display: flex;
+      }
+    }
+
+    .flex-content-carousel {
       display: flex;
     }
 
@@ -139,10 +194,20 @@
       .centered-content {
         align-items: center;
         height: 100%;
-        margin: 5vh;
+
+        @include media(mobile) {
+          margin: 0;
+        }
+
+        @include media(desktop) {
+          margin: 5vh;
+        }
 
         .project-container {
-          display: flex;
+          
+          @include media(desktop) {
+            display: flex;
+          }
           margin-bottom: 60px;
 
           a:not(:first-child) {
@@ -158,9 +223,9 @@
           }
 
           .volunteer-exp {
+            color: white;
             min-height: 40vh;
             min-width: 40vh;
-            color: white;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -189,8 +254,11 @@
       }
 
       .center-carousel {
-        width: 50%;
         margin: 0 auto;
+        
+        @include media(desktop) {
+          width: 50%;
+        }
       }
 
       .carousel-container {
@@ -200,18 +268,29 @@
       }
 
       .carousel-slide {
-        height: 30rem;
         width: 100%;
         overflow: hidden;
         align-items: center;
         justify-content: center;
         transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 
-          img {
-            height: 100%;
-            width: auto;
-            object-fit: contain;
-          }
+        img {
+          height: 100%;
+          width: auto;
+          object-fit: contain;
+        }
+        
+        @include media(mobile, tablet) {
+          height: 20rem;
+        }
+
+        @include media(tablet-largefont-size) {
+          height: 60rem;
+        }
+
+        @include media(desktop) {
+          height: 40rem;
+        }
       }
 
       .inactive-slide {
@@ -221,6 +300,7 @@
       .button-container {
         margin-top: 20px;
         button {
+          font-size: 1em;
           margin: 5px 12px;
           color: white;
           background-color: #EE8434;
@@ -243,22 +323,26 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: rgba(238, 236, 236, 0.9);
+  background-color: rgba(238, 236, 236);
   min-height: 7vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   .name {
-    font-size: calc(1em);
-    padding: 0 4vh;
+    @include media(mobile) {
+      font-size: .8em;
+      padding: 0 2vh;
+    }
+
+    @include media(tablet, tablet-large, desktop) {
+      font-size: 1em;
+      padding: 0 4vh;
+    }
   }
 
   .menu {
@@ -270,6 +354,16 @@
     font-weight: bold;
     color: rgb(68, 66, 66);
     cursor: pointer;
+  }
+
+  .menu-container {
+    @include media(mobile) {
+      display: none;
+    }
+
+    @include media(tablet, tablet-large, desktop) {
+      display: flex;
+    }
   }
 }
 

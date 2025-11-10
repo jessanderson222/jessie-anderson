@@ -37,7 +37,7 @@ export const Carousel = (props) => {
                     })
                 }
             </div>
-            <div className="button-container flex-content justify-center">
+            <div className="button-container flex-content-carousel justify-center">
                 <button onClick={() => carouselScrollLeft()}>last</button>
                 <button onClick={() => carouselScrollRight()}>next</button>
             </div>

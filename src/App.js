@@ -9,7 +9,7 @@ import panel from './photos/oit-panel.png';
 import oitLi from './photos/oit-li.png'
 import ergSummit from './photos/ERG-summit.jpg'
 import penn from './photos/penn.jpg'
-import './App.css';
+import './App.scss';
 
 export const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,11 +23,11 @@ export const App = () => {
     <div className="App">
       <header className="App-header">
         <h2 className="name">Jessie Anderson</h2>
-        <div>
+        <div className="menu-container">
           <a href="#about-me" className="menu">About Me</a>
           <a href="#software" className="menu">Software Development</a>
           <a href="#volunteer" className="menu">Volunteer</a>
-          <a href="#art" className="menu">Art</a>
+          <a href="#art" className="menu">Artwork</a>
         </div>
       </header>
       <div className="main">
@@ -53,7 +53,7 @@ export const App = () => {
               <div className="button-container">
                 <button>Software Development</button>
                 <button>Volunteer</button>
-                <button>Art and Illustration</button>
+                <button>Artwork</button>
               </div>
             </div>
           </div>
@@ -98,17 +98,17 @@ export const App = () => {
               <h1>Volunteer</h1>
               <div className="project-container">
                 <a href="#mayor">
-                  <div className="volunteer-exp zohran-for-mayor centered-content flex-content">
+                  <div className="volunteer-exp zohran-for-mayor centered-content flex-content-carousel">
                     <h2>Zohran Mamdani for Mayor</h2>
                   </div>
                 </a>
                 <a href="#out-in-tech">
-                  <div className="volunteer-exp out-in-tech centered-content flex-content">
+                  <div className="volunteer-exp out-in-tech centered-content flex-content-carousel">
                     <h2>Out in Tech</h2>
                   </div>
                 </a>
                 <a href="#out-foundation">
-                  <div className="volunteer-exp out-foundation centered-content flex-content">
+                  <div className="volunteer-exp out-foundation centered-content flex-content-carousel">
                     <h2>The OUT Foundation</h2>
                   </div>
                 </a>
@@ -154,7 +154,7 @@ export const App = () => {
         </section>
         <section className="row" id="out-foundation">
           <h1>The OUT Foundation</h1>
-          <div className="centered-content flex-content justify-center">
+          <div className="centered-content flex-content-carousel justify-center">
             <Carousel
               data={OUT_CAROUSEL}
               // inheritClass={"center-carousel"}
@@ -177,7 +177,7 @@ export const App = () => {
           </div>
         </section>
         <section className="row resume-page" id="art">
-          <h1>Art and Illustration</h1>
+          <h1>Artwork</h1>
           <div className="resume-content">
             <p>
             I have loved art since I was an elementary school kid drawing in the margins of all my assignments. I mainly love to paint and use watercolors or acrylics.
@@ -186,7 +186,7 @@ export const App = () => {
               In addition to my own art, I cofounded a queer figure drawing group with my friends. We host a monthly figure drawing session for up to 20 people. More details to come soon.
             </p>
           </div>
-          <div className="centered-content flex-content justify-center">
+          <div className="centered-content flex-content-carousel justify-center">
             <div>
               <Carousel
                 data={ART_CAROUSEL}

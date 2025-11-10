@@ -28,10 +28,6 @@ export const ART_CAROUSEL = [
         alt: 'A brick row house with American flag bunting framed on a white wall.',
     },
     {
-        img: deer,
-        alt: 'A deer in a forest lake made from small round peices of candy glued together',
-    },
-    {
         img: porchHouse,
         alt: 'A red brick house with a large front porch surrounded by vibrant green grass and tall trees.',
     },
