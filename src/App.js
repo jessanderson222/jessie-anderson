@@ -24,10 +24,10 @@ export const App = () => {
       <header className="App-header">
         <h2 className="name">Jessie Anderson</h2>
         <div>
-          <button className="menu">About Me</button>
-          <button className="menu">Software Development</button>
-          <button className="menu">Volunteer</button>
-          <button className="menu">Art</button>
+          <a href="#about-me" className="menu">About Me</a>
+          <a href="#software" className="menu">Software Development</a>
+          <a href="#volunteer" className="menu">Volunteer</a>
+          <a href="#art" className="menu">Art</a>
         </div>
       </header>
       <div className="main">
@@ -97,15 +97,21 @@ export const App = () => {
             <div className="volunteer-container justify-center">
               <h1>Volunteer</h1>
               <div className="project-container">
-                <div className="volunteer-exp zohran-for-mayor centered-content flex-content">
-                  <h2>Zohran Mamdani for Mayor</h2>
-                </div>
-                <div className="volunteer-exp out-in-tech centered-content flex-content">
-                  <h2>Out in Tech</h2>
-                </div>
-                <div className="volunteer-exp out-foundation centered-content flex-content">
-                  <h2>The OUT Foundation</h2>
-                </div>
+                <a href="#mayor">
+                  <div className="volunteer-exp zohran-for-mayor centered-content flex-content">
+                    <h2>Zohran Mamdani for Mayor</h2>
+                  </div>
+                </a>
+                <a href="#out-in-tech">
+                  <div className="volunteer-exp out-in-tech centered-content flex-content">
+                    <h2>Out in Tech</h2>
+                  </div>
+                </a>
+                <a href="#out-foundation">
+                  <div className="volunteer-exp out-foundation centered-content flex-content">
+                    <h2>The OUT Foundation</h2>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -170,7 +176,7 @@ export const App = () => {
             </div>
           </div>
         </section>
-        <section className="row resume-page" id="volunteer">
+        <section className="row resume-page" id="art">
           <h1>Art and Illustration</h1>
           <div className="resume-content">
             <p>

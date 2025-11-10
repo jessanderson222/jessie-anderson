@@ -145,7 +145,7 @@
           display: flex;
           margin-bottom: 60px;
 
-          div:not(:first-child) {
+          a:not(:first-child) {
             margin-left: 30px;
           }
 
@@ -262,6 +262,7 @@
   }
 
   .menu {
+    font-size: calc(0.8em);
     padding: 0 1vh;
     margin: .83em 0;
     background: transparent;
