@@ -342,19 +342,19 @@ $breakpoints: (
   z-index: 1;
 
   .name {
+    font-size: 1em;
+
     @include media(mobile) {
-      font-size: .8em;
       padding: 0 2vh;
     }
 
     @include media(tablet, tablet-large, desktop) {
-      font-size: 1em;
       padding: 0 4vh;
     }
   }
 
   .menu {
-    font-size: calc(0.8em);
+    font-size: 1em;
     padding: 0 1vh;
     margin: .83em 0;
     background: transparent;
