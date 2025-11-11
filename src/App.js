@@ -25,7 +25,7 @@ export const App = () => {
         <h2 className="name">Jessie Anderson</h2>
         <div className="menu-container">
           <a href="#about-me" className="menu">About Me</a>
-          <a href="#software" className="menu">Software Development</a>
+          <a href="#software" className="menu">Software</a>
           <a href="#volunteer" className="menu">Volunteer</a>
           <a href="#art" className="menu">Artwork</a>
         </div>
@@ -51,9 +51,9 @@ export const App = () => {
                 Here's some of my best work.
               </p>
               <div className="button-container">
-                <button>Software Development</button>
-                <button>Volunteer</button>
-                <button>Artwork</button>
+                <a href="#software">Software</a>
+                <a href="#volunteer">Volunteer</a>
+                <a href="#art">Artwork</a>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export const App = () => {
         <section className="row resume-page flex-content" id="software">
           <div className="centered-content flex-content">
             <div className="resume-text">
-              <h1>Software Development</h1>
+              <h1>Software</h1>
               <div>
                 <p>I am a full-stack engineer with six years of experience. I work in React, TypeScript, Java, Spring, Python, and Rails.</p>
                 <p>Currently, I build stuff at NBCUniversal with the News Group. I spent two years on the article and video team working on live and 
@@ -116,7 +116,7 @@ export const App = () => {
             </div>
           </div>
         </section>
-        <section className="row section-background flex-content" id="mayor">
+        <section className="row section-background flex-content-carousel" id="mayor">
           <div className="text-box">
             <div>
               <h1>Zohran Mamdani for Mayor</h1>
@@ -134,8 +134,8 @@ export const App = () => {
               <h1>Out in Tech</h1>
               <div>
                 <p>Out in Tech is an organization focused on uniting and uplifting the LGBTQ community. I fulfilled this mission by creating networking opportunities as well as events aimed at building career skills. </p>
-                <p>During the COVID-19 pandemic, I started a new chapter of the organization virtually in Salt Lake City, Utah as an opportunity to build community during a lonely time. I interviewed and assembled a chapter leadership team and built a Slack community from 0 to 60+ members.</p>
                 <p>Most recently, I served in chapter leadership in New York City. This included planning and coordinating events for up to 85 people as well as hosting events and panels with up to 100 attendees.</p>
+                <p>During the COVID-19 pandemic, I started a new chapter of the organization virtually in Salt Lake City, Utah as an opportunity to build community during a lonely time. I interviewed and assembled a chapter leadership team and built a Slack community from 0 to 60+ members.</p>
               </div>
               <div className="software-img">
                 <img alt="the NBC Sports front from NBCNews.com" src={panel} />
