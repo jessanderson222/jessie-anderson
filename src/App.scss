@@ -365,12 +365,50 @@ $breakpoints: (
   }
 
   .menu-container {
-    @include media(mobile) {
-      display: none;
+    .menu-accordion {        
+      .menu-line {
+        width: 20px;
+        height: 2px;
+        background-color: rgb(68, 66, 66);
+        margin: 3px 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include media(desktop, tablet, tablet-large) {
+        margin: 10px 50px;
+      }
+
+      @include media(mobile) {
+        margin-right: 16px;
+      }
     }
 
-    @include media(tablet, tablet-large, desktop) {
-      display: flex;
+    .menu-dropdown {
+      margin-top: 12px;
+      border-top: rgb(68, 66, 66) 1px solid;
+      position: absolute;
+      background-color: rgba(238, 236, 236);
+
+      div {
+        min-width: 100px;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      @include media(desktop, tablet, tablet-large) {
+        margin-right: 50px;
+      }
+
+      @include media(mobile) {
+        margin-right: 16px;
+        right: 0;
+      }
     }
   }
 }

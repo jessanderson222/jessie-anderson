@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from './Carousel';
+import { Menu } from './Menu';
 import { OUT_CAROUSEL } from './data/outFoundationCarousel';
 import { ART_CAROUSEL } from './data/artCarousel';
 
@@ -12,23 +13,11 @@ import penn from './photos/penn.jpg'
 import './App.scss';
 
 export const App = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const onButtonClick = () => {
-    console.log('called')
-    setMenuOpen(!menuOpen)
-  }
-
   return (
     <div className="App">
       <header className="App-header">
         <h2 className="name">Jessie Anderson</h2>
-        <div className="menu-container">
-          <a href="#about-me" className="menu">About Me</a>
-          <a href="#software" className="menu">Software</a>
-          <a href="#volunteer" className="menu">Volunteer</a>
-          <a href="#art" className="menu">Artwork</a>
-        </div>
+        <Menu />
       </header>
       <div className="main">
         <section className="section-background" id="welcome-page">
