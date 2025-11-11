@@ -16,7 +16,9 @@ export const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 className="name">Jessie Anderson</h2>
+        <a href="#welcome-page">
+          <h2 className="name">Jessie Anderson</h2>
+        </a>
         <Menu />
       </header>
       <div className="main">

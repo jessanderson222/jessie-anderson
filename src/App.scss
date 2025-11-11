@@ -35,15 +35,15 @@ $breakpoints: (
     font-weight: 400;
   }
 
-  a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #EE8434;
-  }
-
   .main {
     height: 100%;
     width: 100%;
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #EE8434;
+    }
 
     .section-background {
       background-size: cover;
@@ -341,6 +341,11 @@ $breakpoints: (
   top: 0;
   z-index: 1;
 
+  a {
+    text-decoration: none;
+    color: rgb(68, 66, 66);
+  }
+
   .name {
     font-size: 1em;
 
@@ -360,7 +365,6 @@ $breakpoints: (
     background: transparent;
     border: none;
     font-weight: bold;
-    color: rgb(68, 66, 66);
     cursor: pointer;
   }
 
