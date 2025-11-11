@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jessie-anderson.com/static/css/main.922cdf8f.css",
-    "main.js": "/jessie-anderson.com/static/js/main.224dbf60.js",
+    "main.css": "/jessie-anderson.com/static/css/main.1b10bb4c.css",
+    "main.js": "/jessie-anderson.com/static/js/main.5f4f14c0.js",
     "static/js/453.95100d50.chunk.js": "/jessie-anderson.com/static/js/453.95100d50.chunk.js",
     "static/media/welcome-page-2.jpg": "/jessie-anderson.com/static/media/welcome-page-2.7319918202570e29b6b9.jpg",
     "static/media/zohran-for-mayor.jpeg": "/jessie-anderson.com/static/media/zohran-for-mayor.d3ddd7f4ae09b3264af6.jpeg",
@@ -35,12 +35,12 @@
     "static/media/ERG-summit.jpg": "/jessie-anderson.com/static/media/ERG-summit.d12277e4302749be93d7.jpg",
     "static/media/oit-li.png": "/jessie-anderson.com/static/media/oit-li.89097b80f3698bb1f8c7.png",
     "index.html": "/jessie-anderson.com/index.html",
-    "main.922cdf8f.css.map": "/jessie-anderson.com/static/css/main.922cdf8f.css.map",
-    "main.224dbf60.js.map": "/jessie-anderson.com/static/js/main.224dbf60.js.map",
+    "main.1b10bb4c.css.map": "/jessie-anderson.com/static/css/main.1b10bb4c.css.map",
+    "main.5f4f14c0.js.map": "/jessie-anderson.com/static/js/main.5f4f14c0.js.map",
     "453.95100d50.chunk.js.map": "/jessie-anderson.com/static/js/453.95100d50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.922cdf8f.css",
-    "static/js/main.224dbf60.js"
+    "static/css/main.1b10bb4c.css",
+    "static/js/main.5f4f14c0.js"
   ]
 }
