@@ -3,7 +3,6 @@ import yellowHouse from '../photos/artCarouselPhotos/yellow-house.JPG';
 import abstract from '../photos/artCarouselPhotos/abstract.JPG';
 import dc from '../photos/artCarouselPhotos/dc.JPG';
 import miniMountain from '../photos/artCarouselPhotos/mini-mountain.jpg';
-import deer from '../photos/artCarouselPhotos/deer.jpeg';
 import man from '../photos/artCarouselPhotos/man.jpeg';
 import porchHouse from '../photos/artCarouselPhotos/porch-house.JPG';
 import roseHouse from '../photos/artCarouselPhotos/porch-house.JPG';

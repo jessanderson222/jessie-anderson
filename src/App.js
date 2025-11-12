@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Carousel } from './Carousel';
 import { Menu } from './Menu';
 import { OUT_CAROUSEL } from './data/outFoundationCarousel';
@@ -28,7 +28,7 @@ export const App = () => {
         <section className="row flex-content" id="about-me">
           <div className="centered-content flex-content">
             <div className="img-container">
-              <img alt="a picture of me in Bryant Park" src={helloSelfie} />
+              <img alt="Me in Bryant Park" src={helloSelfie} />
             </div>
             <div id="about-text">
               <h1 className="about-intro">I'm Jessie.</h1>
