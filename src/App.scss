@@ -56,7 +56,6 @@ $breakpoints: (
       vertical-align: middle;
 
       @include media(mobile, tablet) {
-        background-attachment: scroll;
         background-position: center top;
       }
     }
