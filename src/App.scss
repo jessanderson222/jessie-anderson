@@ -54,6 +54,11 @@ $breakpoints: (
 
       // height: 100vh;
       vertical-align: middle;
+
+      @include media(mobile, tablet) {
+        background-attachment: scroll;
+        background-position: center top;
+      }
     }
 
     #welcome-page {
