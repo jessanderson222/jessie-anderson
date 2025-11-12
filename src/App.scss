@@ -51,6 +51,7 @@ $breakpoints: (
       background-repeat: no-repeat;
       background-attachment: fixed;
       margin: 0;
+
       height: 100vh;
       vertical-align: middle;
     }
@@ -260,9 +261,7 @@ $breakpoints: (
       .center-carousel {
         margin: 0 auto;
         
-        @include media(desktop) {
-          width: 50%;
-        }
+        width: 50%;
       }
 
       .carousel-container {
