@@ -22,7 +22,7 @@ export const Carousel = (props) => {
     }
     console.log(inheritClass)
     return(
-        <div className={inheritClass}>
+        <>
             <div className="carousel-container">
                 {
                     data.map((car, index) => {
@@ -36,11 +36,11 @@ export const Carousel = (props) => {
                         );
                     })
                 }
+                <div className="button-container flex-content-carousel justify-center">
+                    <button onClick={() => carouselScrollLeft()}>last</button>
+                    <button onClick={() => carouselScrollRight()}>next</button>
+                </div>
             </div>
-            <div className="button-container flex-content-carousel justify-center">
-                <button onClick={() => carouselScrollLeft()}>last</button>
-                <button onClick={() => carouselScrollRight()}>next</button>
-            </div>
-        </div>
+        </>
     )
 }

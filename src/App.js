@@ -148,7 +148,6 @@ export const App = () => {
           <div className="centered-content flex-content-carousel justify-center">
             <Carousel
               data={OUT_CAROUSEL}
-              // inheritClass={"center-carousel"}
             />
           </div>
           <div className="resume-text">
