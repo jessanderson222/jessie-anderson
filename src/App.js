@@ -83,7 +83,7 @@ export const App = () => {
             </div>
           </div>
         </section>
-        {/* <section className="row flex-content" id="volunteer">
+        <section className="row flex-content" id="volunteer">
           <div className="centered-content flex-content">
             <div className="volunteer-container justify-center">
               <h1>Volunteer</h1>
@@ -183,7 +183,7 @@ export const App = () => {
               />
             </div>
           </div>
-        </section> */}
+        </section>
       </div>
     </div>
   );
